@@ -11,6 +11,7 @@
     --color-secondary: #212121;
     --color-inverted: #ffffff;
     --color-social-icons: #afb1b8;
+    --input-border: rgba(33, 33, 33, 0.2);
 }
 
 /* Body */
@@ -312,7 +313,7 @@ img {
     background-color: var(--color-brand);
     border: 0;
     cursor: pointer;
-    font-family: 'Roboto', inherit;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -736,6 +737,10 @@ span>.logo-white {
     color: var(--color-brand);
 }
 
+.subscription-container {
+    margin-right: 93px;
+}
+
 .subscription-title {
     display: block;
     margin-top: 0;
@@ -821,6 +826,7 @@ span>.logo-white {
     pointer-events: none;
 }
 
+/* Modal */
 .modal {
     position: absolute;
     width: 528px;
@@ -830,12 +836,14 @@ span>.logo-white {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--color-background);
+    justify-content: center;
+    padding: 40px;
 }
 
 .modal-close-button {
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    color: black;
+    /* color: black; */
     padding: 6px;
     display: flex;
     justify-content: flex-end;
@@ -845,6 +853,201 @@ span>.logo-white {
     right: 8px;
     cursor: pointer;
     background-color: var(--color-background);
+}
+
+.modal-close-icon {
+    fill: black
+}
+
+.modal-close-icon:hover {
+    fill: var(--color-brand);
+}
+
+.modal-title {
+    color: var(--color-secondary);
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.form-label {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+    text-align: left;
+    justify-content: left;
+}
+
+.form-control {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.form-control-textarea {
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    /* color: rgba(117, 117, 117, 0.5); */
+}
+
+.form-input {
+    width: 100%;
+    padding: 11px 12px 12px 42px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.form-input:focus {
+    border-color: var(--color-brand);
+}
+
+.form-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    fill: var(--color-secondary);
+}
+
+.form-control:focus-within .form-icon {
+    fill: var(--color-brand);
+}
+
+/* Інший варінт щоб іконка змінювала філ при фокусі */
+/* .form-input:focus+.form-icon {
+    fill: var(--color-brand);
+} */
+
+.form-textarea {
+    height: 120px;
+    width: 100%;
+    resize: none;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    padding: 12px 16px;
+    outline: none;
+    cursor: pointer;
+}
+
+.form-textarea:focus {
+    border-color: var(--color-brand);
+}
+
+/* Checkbox */
+.checkbox-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+}
+
+.checkbox-control {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* .checkbox-label {
+    display: inline-block;
+    position: relative;
+    padding-left: 24px;
+} */
+
+.checkbox-label {
+    display: inline-block;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+}
+
+.form-label {
+    display: inline-block;
+}
+
+.checkbox-icon {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--color-secondary);
+    border-radius: 2px;
+    margin-right: 8px;
+}
+
+
+/* .checkbox-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 15px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 2px;
+}
+
+.checkbox-icon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    background-image: url(../images/icon\ check.svg);
+    background-color: var(--color-brand);
+    opacity: 0;
+} */
+
+.checkbox-input:checked+.checkbox-icon {
+    border: none;
+    background-color: var(--color-brand);
+}
+
+.checkbox-terms {
+    text-decoration: underline;
+    letter-spacing: 0.03em;
+    color: var(--color-brand);
+}
+
+.form-button {
+    /* align-items: center;
+    justify-content: center; */
+    text-align: center;
+    color: var(--color-inverted);
+    background-color: var(--color-brand);
+    border: 0;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    padding: 10px 32px;
+    transition: opacity 250ms cubic-bezier(0.4,
+            0,
+            0.2,
+            1),
+        visibility 250ms cubic-bezier(0.4,
+            0,
+            0.2,
+            1);
+    transition-property: color, background-color;
+}
+
+.form-button:hover {
+    color: var(--color-inverted);
+    background-color: #188ce8;
+}
+
+.form-button:focus {
+    color: var(--color-inverted);
+    background-color: #188ce8;
 }
 
 /* .modal-close-button:hover {
