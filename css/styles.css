@@ -710,7 +710,6 @@ span>.logo-white {
 .address-contact {
     color: rgba(255, 255, 255, 0.6);
     font-family: 'Roboto', inherit;
-    ;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -803,6 +802,90 @@ span>.logo-white {
     fill: var(--color-inverted);
 }
 
+/* Form */
+.subscription-title {
+    margin-bottom: 20px;
+}
+
+.contact-form-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.form-input-footer {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    transition: opacity 250ms cubic-bezier(0.4,
+            0,
+            0.2,
+            1),
+        visibility 250ms cubic-bezier(0.4,
+            0,
+            0.2,
+            1);
+    transition-property: border-color;
+}
+
+.form-input-footer:focus {
+    border-color: var(--color-brand);
+}
+
+.form-input-footer:hover {
+    border-color: var(--color-brand);
+}
+
+.form-button-footer {
+    color: var(--color-inverted);
+    background-color: var(--color-brand);
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    padding: 10px 28px;
+    width: 200px;
+    height: 50px;
+    outline: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: opacity 1000ms cubic-bezier(0.4,
+            0,
+            0.2,
+            1),
+        visibility 1000ms cubic-bezier(0.4,
+            0,
+            0.2,
+            1);
+    transition-property: color, background-color;
+}
+
+.form-button-footer:hover {
+    color: var(--color-inverted);
+    background-color: var(--color-brand);
+}
+
+.form-button-footer:focus {
+    color: var(--color-inverted);
+    background-color: var(--color-brand);
+}
+
+.subscription-container {
+    margin-right: 93px;
+}
+
 /* Modal */
 .backdrop {
     background-color: rgba(0, 0, 0, 0.2);
@@ -827,6 +910,11 @@ span>.logo-white {
 }
 
 /* Modal */
+form {
+    margin-top: 0em;
+    display: block;
+}
+
 .modal {
     position: absolute;
     width: 528px;
@@ -837,7 +925,10 @@ span>.logo-white {
     transform: translate(-50%, -50%);
     background-color: var(--color-background);
     justify-content: center;
+    align-items: center;
     padding: 40px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
 
 .modal-close-button {
@@ -859,7 +950,19 @@ span>.logo-white {
     fill: black
 }
 
-.modal-close-icon:hover {
+.modal-close-button:focus {
+    color: var(--color-brand);
+}
+
+.modal-close-button:focus-within .modal-close-icon {
+    fill: var(--color-brand);
+}
+
+.modal-close-button:hover {
+    color: var(--color-brand);
+}
+
+.modal-close-button:hover .modal-close-icon {
     fill: var(--color-brand);
 }
 
@@ -883,6 +986,7 @@ span>.logo-white {
 .form-control {
     position: relative;
     margin-bottom: 10px;
+    display: block;
 }
 
 .form-control-textarea {
@@ -947,6 +1051,7 @@ span>.logo-white {
 }
 
 .checkbox-control {
+    display: block;
     position: relative;
     justify-content: center;
     align-items: center;
@@ -1013,22 +1118,23 @@ span>.logo-white {
     color: var(--color-brand);
 }
 
+
 .form-button {
-    /* align-items: center;
-    justify-content: center; */
     text-align: center;
     color: var(--color-inverted);
     background-color: var(--color-brand);
     border: 0;
     cursor: pointer;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
+    /* font-family: 'Roboto', sans-serif;
+    font-style: normal; */
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
     border-radius: 4px;
-    padding: 10px 32px;
+    padding: 10px 52px;
+    width: 200px;
+    height: 50px;
     transition: opacity 250ms cubic-bezier(0.4,
             0,
             0.2,
